@@ -2,96 +2,35 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,300&display=swap"
-      rel="stylesheet"
-    />
-    <title>Travel App</title>
+    <link href="https://fonts.googleapis.com/css?family=Alegreya|Poiret+One|Spirax" rel="stylesheet">
+</head>
+    <title>Search Engine</title>
   </head>
   <body>
-    <div class="flex-wrapper">
-      <main>
-        <header></header>
-        <sectoion>
-          <h1 class="body-title">An awesome vacation starts from here</h1>
-          <img />
-        </sectoion>
-        <sectoion>
-          <form onsubmit="return Client.handleSubmit(event)">
-            <label for="start">Destination</label>
-            <input
-              required
-              id="destination"
-              placeholder="Enter a city name"
-              class="destination"
-              type="text"
-              name="destination"
-              value=""
-            />
-            <label for="start">Start date:</label>
-            <input
-              required
-              id="travelStartDate"
-              placeholder="2021/mm/dd"
-              class="duration"
-              type="date"
-              name="tripStart"
-              min="2021-01-01"
-              max="2022-12-31"
-              value=""
-            />
-            <label for="start">End date:</label>
-            <input
-              required
-              id="travelEndDate"
-              placeholder="2021/mm/dd"
-              class="duration"
-              type="date"
-              name="tripEnd"
-              min="2021-01-01"
-              max="2022-12-31"
-              value=""
-            />
-            <input
-              class="button"
-              type="submit"
-              name=""
-              value="submit"
-              onclick="return Client.handleSubmit(event)"
-              onsubmit="return handleSubmit(event)"
-            />
-          </form>
-        </sectoion>
-
-        <section>
-          <div id="result"></div>
-        </section>
-      </main>
-      <footer>
-        <div class="footer-flex">
-          <h5>Mady by Yuling in 2021</h5>
-
-          <a href="www.linkedin.com/in/yuling-lin" target="_blank" class="link">
-            <img
-              class="footer-img"
-              src="img/linkedin.png"
-              alt="linkedin icon"
-            />
-          </a>
-        </div>
-      </footer>
+    <div>
+      <img class="SmallerPic"  src="https://s-media-cache-ak0.pinimg.com/originals/ff/65/60/ff6560ea8e6a9b8e7dd9404b124a507e.jpg">
     </div>
-    <script>
-      // Check that service workers are supported
-      if ("serviceWorker" in navigator) {
-        // Use the window load event to keep the page load performant
-        window.addEventListener("load", () => {
-          navigator.serviceWorker.register("/service-worker.js");
-        });
-      }
-    </script>
+  <div class="container">
+      <h1 class="text-center topspace">The Wikipedia Viewer</h1>
+      <h3 class="text-center">Capture everything</h3>
+        <div class="container-fluid jumbotron">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Seacher for..." id="searchTerm">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button" id="searchBtn"  title="Click to search"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button><!--search-btn-->
+                <button class="btn btn-default" type="button" id="randomBtn" title="get a random search"><span class="glyphicon glyphicon-random" aria-hidden="true"></span></button>        
+              </span><!--input-group-btn-->
+          </div><!--input-group-->
+          <div id="intro"></div>
+          <div id="result"></div>
+        </div><!--container-fluid-->
+   </div><!--container-->
+
+    <footer>
+      <p class="footerText"><strong>Created by Yuling 2017</strong></p>
+     <footer>
   </body>
 </html>
