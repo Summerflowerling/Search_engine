@@ -1,3 +1,4 @@
+/*
 export function updateUi (location, imgUrl, start, end, duration, weatherInfo){
     
     
@@ -50,3 +51,4 @@ export function updateUi (location, imgUrl, start, end, duration, weatherInfo){
    
 
 }
+*/
