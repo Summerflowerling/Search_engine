@@ -1,7 +1,7 @@
 
 
 /*Api URL*/
-
+const url ="https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch="
 var path = require('path')
 
 /*.env and api keys*/
@@ -30,6 +30,27 @@ app.get('/', function (req, res) {
     res.sendFile(path.resolve('src/client/view/index.html'))
 })
 
+
+
+ app.get('/getData', async function(req,res){
+   
+    const userInput = document.getElementById("searchTerm").value
+    const data = await fetch (url+userInput)
+
+    try{
+        const json = await data.json()
+        res.send(json)
+        console.log("Json Data got", json)
+
+    }
+    catch(error){
+        console.log("You got error:",error)
+    }
+    
+ 
+
+
+})
 
 
 module.exports = app
