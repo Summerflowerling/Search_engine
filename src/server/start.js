@@ -1,2 +1,7 @@
 const app = require('./server.js')
-app.listen(8080)
+const port = 8086
+app.listen(port, listening)
+
+function listening(){
+    console.log(`Running on port ${port}`)
+}

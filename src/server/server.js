@@ -1,32 +1,20 @@
 
 
 /*Api URL*/
-const geonamesBaseUrl = "http://api.geonames.org/searchJSON?"
-const weatherBitUrl = "https://api.weatherbit.io/v2.0/forecast/daily?"
-const pixabayUrl="https://pixabay.com/api/?key=4772361-58a041a9c4a31b16cbe90fbc1&q=yellow+flowers&image_type=photo"
+
 var path = require('path')
 
 /*.env and api keys*/
 const dotenv = require('dotenv');
 dotenv.config();
-const geonameApiKey = process.env.GEONAME_API ;
-const weatherbitKey = process.env.weatherbit; 
-const pixabayKey = process.env.pixabay
+
 
 const express = require('express')
 const app = express() 
 const fetch = require ('node-fetch')
 app.use(express.static('dist'))
 
-/*const port = 8080
-app.listen(port, function(){
-    console.log(`Testing on port ${port}`)
-    //test if .env works fine
-    console.log(`geo name api key`+ geonameApiKey)
-    console.log(`weatherbit api key=${weatherbitKey}`)
-    console.log(`pixabay api key=${pixabayKey}`)
-})
-*/
+
 
 
 const bodyParser = require('body-parser')
@@ -38,13 +26,17 @@ const cors = require("cors")
 app.use(cors())
 
 app.get('/', function (req, res) {
-    res.sendFile('dist/index.html')
-    //res.sendFile(path.resolve('src/client/view/index.html'))
+    //res.sendFile('dist/index.html')
+    res.sendFile(path.resolve('src/client/view/index.html'))
 })
 
 
 
+module.exports = app
+
 /*NOTE: replace the api key with stored variable will crush, need help to debug */
+
+/*
 app.post("/getGeoname", async function(req,res){
    
     const API_URL = `http://api.geonames.org/searchJSON?q=${req.body.location}&maxRows=1&username=iku124` 
@@ -88,5 +80,6 @@ app.post("/getGeoname", async function(req,res){
 
 })
 
+*/
 
-module.exports = app
+
