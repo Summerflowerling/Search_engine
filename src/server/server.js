@@ -1,7 +1,7 @@
 
 
 /*Api URL*/
-const url ="https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch="
+
 var path = require('path')
 
 /*.env and api keys*/
@@ -16,7 +16,6 @@ app.use(express.static('dist'))
 
 
 
-
 const bodyParser = require('body-parser')
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -25,6 +24,11 @@ app.use(bodyParser.json());
 const cors = require("cors")
 app.use(cors())
 
+/*Experiment*/
+/*Try adding router*/
+//const router = express.Router()
+//app.use("/", router)
+
 app.get('/', function (req, res) {
     //res.sendFile('dist/index.html')
     res.sendFile(path.resolve('src/client/view/index.html'))
@@ -32,16 +36,16 @@ app.get('/', function (req, res) {
 
 
 
- app.get('/getData', async function(req,res){
-   
-    const userInput = document.getElementById("searchTerm").value
-    const data = await fetch (url+userInput)
+ app.get('/getInput/:searchTerm', async function(req,res){
+    const userInput = req.params.searchTerm
+    const url =`https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=${userInput}`
+    const data = await fetch (url)
 
     try{
         const json = await data.json()
         res.send(json)
-        console.log("Json Data got", json)
-
+        console.log("Json Data got", json.query.search[1].title)
+        
     }
     catch(error){
         console.log("You got error:",error)
