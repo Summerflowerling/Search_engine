@@ -1,7 +1,7 @@
 
 
 /*Api URL*/
-
+let projectData ={}
 var path = require('path')
 
 /*.env and api keys*/
@@ -30,8 +30,8 @@ app.use(cors())
 //app.use("/", router)
 
 app.get('/', function (req, res) {
-    //res.sendFile('dist/index.html')
-    res.sendFile(path.resolve('src/client/view/index.html'))
+    res.sendFile('dist/index.html')
+    //res.sendFile(path.resolve('src/client/view/index.html'))
 })
 
 
@@ -43,8 +43,9 @@ app.get('/', function (req, res) {
 
     try{
         const json = await data.json()
-        res.send(json)
-        console.log("Json Data got", json.query.search[1].title)
+        projectData = json
+        res.send(projectData)
+        console.log("Json Data got", json)
         
     }
     catch(error){
