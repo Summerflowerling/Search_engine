@@ -2,6 +2,7 @@
   "name": "search_engine",
   "version": "1.0.1",
   "main": "index.js",
+  "private":true,
   "scripts": {
     "start": "nodemon src/server/start.js",
     "build-prod": "webpack --config webpack.prod.js",
