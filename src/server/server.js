@@ -38,7 +38,8 @@ app.get('/', function (req, res) {
 
  app.get('/getInput/:searchTerm', async function(req,res){
     const userInput = req.params.searchTerm
-    const url =`https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=${userInput}`
+    const url = `https://en.wikipedia.org/w/api.php?action=query&format=json&prop=info&generator=search&inprop=url&gsrsearch=${userInput}&gsrprop=snippet`
+    //const url =`https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=${userInput}`
     const data = await fetch (url)
 
     try{

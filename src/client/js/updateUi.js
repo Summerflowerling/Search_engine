@@ -13,6 +13,7 @@ export function updateUi (sentBackData){
             newDiv.innerHTML = `
             <h3>${sentBackData[count].title}</h3>
             <p>${sentBackData[count].snippet}</p>
+            <p>${sentBackData[count].timestamp}</p>
             `
             resultIntro.appendChild(newDiv)
             count++
