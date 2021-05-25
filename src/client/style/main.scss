@@ -1,10 +1,55 @@
-$bodyColor: #daad86;
-$buttonColor: #d3a588;
-$lightYellow: #f7de86;
-$lighterColor: #f5ede0;
-$whiteFont: rgb(255, 251, 247);
-$brown: #bc986a;
-$blue: #659dbd;
-$font: Cormorant Garamond;
-$sizeOne: 1rem;
-$sizeTwo: 1.5rem;
+$fontSize: 1.2rem;
+$font-poiret: "Poiret One", "serif";
+$font-Alegreya: "Alegreya", "serif";
+$pink: #f3d8cf;
+$dark: #443733;
+
+body {
+  margin: 0;
+  font-family: $font-poiret;
+}
+
+.main-background {
+  //width: 25vw;
+  opacity: 0.9;
+  top: 10vh;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 25% auto 0;
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
+}
+
+.main-title-section-title {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.main-title-section-subtitle {
+  text-align: center;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  height: 2.5rem;
+  text-align: center;
+}
+
+/*box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  //background-color: rgba(pink, 0.7);
+  max-width: 90%;
+}
+*/
