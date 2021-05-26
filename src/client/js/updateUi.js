@@ -12,8 +12,10 @@ export function updateUi (sentBackData){
             let newDiv = document.createElement("div")
             newDiv.setAttribute("class", "result-list")
             newDiv.innerHTML = `
-            <h3><a href=${url} target="_blank">${sentBackData[count].title}</a></h3>
+            <a href=${url} target="_blank">
+            <h3>${sentBackData[count].title}</h3>
             <p>${sentBackData[count].snippet}...</p>
+            </a>
             `
             resultIntro.appendChild(newDiv)
             count++
