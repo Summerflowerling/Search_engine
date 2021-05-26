@@ -3,19 +3,23 @@ $font-poiret: "Poiret One", "serif";
 $font-Alegreya: "Alegreya", "serif";
 $pink: #f3d8cf;
 $dark: #443733;
+$greyPink: rgba(243, 216, 207, 0.5);
 
 body {
   margin: 0;
   font-family: $font-poiret;
+  background-color: $greyPink;
 }
 
-.main-background {
-  //width: 25vw;
+.main-pic {
+  max-width: 100%;
+  height: auto;
   opacity: 0.9;
   top: 10vh;
   position: absolute;
-  transform: translate(-50%, -50%);
+  transform: translate(0%, -30%);
   z-index: -1;
+  opacity: 0.2;
 }
 
 .container {
@@ -29,12 +33,17 @@ body {
 }
 
 .main-title-section-title {
-  font-size: 3rem;
+  font-size: 3.5rem;
   text-align: center;
+  color: #328294;
 }
 
 .main-title-section-subtitle {
   text-align: center;
+  margin-top: -1.5em;
+  margin-bottom: 3em;
+  color: #225561;
+  text-decoration: underline;
 }
 
 footer {
@@ -44,12 +53,6 @@ footer {
   text-align: center;
 }
 
-/*box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 auto;
-  //background-color: rgba(pink, 0.7);
-  max-width: 90%;
-}
+/*
+TODO:media query
 */

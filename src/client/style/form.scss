@@ -2,14 +2,22 @@ $fontSize: 1.2rem;
 //$crismon: "Crimson Text", serif;
 $font-poiret: "Poiret One", "serif";
 $pink: #f3d8cf;
+$lightPink: #f5e5e0;
+$darkPink: #caaea5;
 $dark: #443733;
 
 .search-input {
   color: $dark;
-  border: 1px solid;
-  border-color: #e4e46d;
+  border: 3px solid $pink;
   font-family: $font-poiret, cursive;
   font-size: $fontSize;
+  width: 100%;
+  outline: none;
+  transition-duration: 0.5s;
+}
+
+.search-input:focus {
+  border-color: $darkPink;
 }
 
 .search-btn {
@@ -18,11 +26,18 @@ $dark: #443733;
   padding: 0.3rem 0.5rem;
   cursor: pointer;
   transition-duration: 0.4s;
+  background-color: $pink;
+  border-radius: 5px;
+}
+
+.input-group {
+  display: flex;
+  justify-content: center;
 }
 
 /*TOD: Edit BTN */
 
 .search-btn:hover {
-  background-color: $pink;
-  color: $dark;
+  background-color: $darkPink;
+  color: $lightPink;
 }

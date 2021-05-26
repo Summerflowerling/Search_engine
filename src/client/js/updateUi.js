@@ -13,7 +13,7 @@ export function updateUi (sentBackData){
             newDiv.setAttribute("class", "result-list")
             newDiv.innerHTML = `
             <a href=${url} target="_blank">
-            <h3>${sentBackData[count].title}</h3>
+            <h3 class="list-item-title">${sentBackData[count].title}</h3>
             <p>${sentBackData[count].snippet}...</p>
             </a>
             `

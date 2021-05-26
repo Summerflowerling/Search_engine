@@ -1,0 +1,35 @@
+$lightPink: #f5e5e0;
+$pink: rgba(243, 216, 207, 0.5);
+$darkerPink: rgba(173, 153, 147, 0.5);
+$darkPink: rgba(80, 71, 68, 0.5);
+$dark: #443733;
+$lightPurple: rgba(#e0cbe6, 0.3);
+
+.result-section {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.result-list {
+  font-size: 1.5rem;
+  margin: 2em 0;
+  padding: 1em 2em;
+  border-radius: 5px;
+  background-color: rgba(243, 216, 207, 0.199);
+  background-image: linear-gradient($pink, $lightPurple);
+  transition-duration: 2s;
+}
+
+.result-list:hover {
+  background-image: linear-gradient($lightPurple, $darkerPink);
+}
+
+.list-item-title {
+  font-size: 2rem;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: $darkPink;
+}
