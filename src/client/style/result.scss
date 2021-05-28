@@ -20,6 +20,10 @@ $lightPurple: rgba(#e0cbe6, 0.3);
   transition-duration: 2s;
 }
 
+.result-list:last-child {
+  margin-bottom: 5em;
+}
+
 .result-list:hover {
   background-image: linear-gradient($lightPurple, $darkerPink);
 }
