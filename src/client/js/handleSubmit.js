@@ -1,6 +1,6 @@
 //import { search } from "../../server/server"
 
-const searchTerm = document.getElementById("searchTerm")
+
 
 export async function handleSubmit (search){
     console.log(search)
@@ -26,16 +26,7 @@ export async function handleSubmit (search){
 
 
 
-/*TODO: Figure out how to combine eventListener with webpack*/
 
-searchTerm.addEventListener("keypress", function(e){
-    if (e === 13) {
-        handleSubmit(searchTerm.value)
-        console.log(searchTerm.value)
-         
-       }
-
-})
 
 
 
