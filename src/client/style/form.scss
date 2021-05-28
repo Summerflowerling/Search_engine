@@ -6,6 +6,9 @@ $lightPink: #f5e5e0;
 $darkPink: #caaea5;
 $dark: #443733;
 
+.input-group {
+  width: 80%;
+}
 .search-input {
   color: $dark;
   border: 3px solid $pink;
@@ -28,6 +31,8 @@ $dark: #443733;
   transition-duration: 0.4s;
   background-color: $pink;
   border-radius: 5px;
+  border-color: $pink;
+  margin-left: 0.5em;
 }
 
 .input-group {
@@ -35,9 +40,19 @@ $dark: #443733;
   justify-content: center;
 }
 
-/*TOD: Edit BTN */
-
 .search-btn:hover {
   background-color: $darkPink;
   color: $lightPink;
+}
+
+@media (max-width: 562px) {
+  .search-input {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 940px) {
+  .input-group {
+    width: 50%;
+  }
 }
