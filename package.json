@@ -2,7 +2,7 @@
   "name": "search_engine",
   "version": "1.0.1",
   "main": "index.js",
-  "private":true,
+  "private": true,
   "scripts": {
     "start": "nodemon src/server/start.js",
     "build-prod": "webpack --config webpack.prod.js",
@@ -27,6 +27,7 @@
   "devDependencies": {
     "@babel/core": "^7.13.10",
     "@babel/preset-env": "^7.13.10",
+    "@fortawesome/fontawesome-free": "^5.15.3",
     "babel-core": "^6.26.3",
     "babel-loader": "^8.2.2",
     "babel-plugin-transform-runtime": "^6.23.0",
