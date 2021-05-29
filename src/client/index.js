@@ -14,7 +14,6 @@ const searchTerm = document.getElementById("searchTerm")
 export {
    handleSubmit,
    updateUi
-  
    }
    
 
