@@ -4,17 +4,23 @@ const app = require('../server/server.js')
 
 
 
-describe('Post Endpoints', () => {
-  it('should create a new post', async () => {
+/*describe('Get Endpoints', () => {
+  it('respond with json', async () => {
     const res = await request(app)
-      .post('/getGeoname')
-      .send({
-        location: "paris",
-        startDate: "2021/12/20",
-        endDate:"2021/12/30"
-      })
+      
     expect(res.statusCode).toEqual(200)
     
     
   })
 })
+*/
+
+describe('GET / serachTerm', function() { 
+  it('respond with json', function(done) { 
+    request(app) 
+      .get('/getInput/:searchTerm') 
+      //.set('Accept', 'application/json') 
+      .expect('Content-Type', /json/) 
+      .expect(200, done); 
+  }); 
+});
