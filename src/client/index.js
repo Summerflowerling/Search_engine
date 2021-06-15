@@ -16,7 +16,6 @@ export {
    updateUi
    }
    
-
    searchTerm.addEventListener("keypress", function(e){
       if (e.which === 13) {
           handleSubmit(searchTerm.value)
