@@ -14,19 +14,15 @@ app.use(bodyParser.urlencoded({
     extended: false
 }));
 app.use(bodyParser.json());
-
 app.get('/', function (req, res) {
     res.sendFile('dist/index.html')
     //res.sendFile(path.resolve('src/client/view/index.html'))
 })
 
-
-
 // set up GET router
 app.get('/getInput/:searchTerm', async function(req, res) {
     const userInput = req.params.searchTerm
     const url = `https://en.wikipedia.org/w/api.php?action=query&format=json&prop=info&generator=search&inprop=url&gsrsearch=${userInput}&gsrprop=snippet`
-
     const data = await fetch(url)
 
     try {
